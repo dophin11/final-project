@@ -4,14 +4,34 @@
   <meta charset="UTF-8">
   <title>Personal Nutritionist</title>
   <style>
+    header {
+    background-color: #115017;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    font-size: 30px;
+    }
 
+    section {
+    text-align: center;
+    }
+
+    footer {
+    background-color: #104070;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    font-size:20px;
+    }
   </style>
 </head>
 <body>
   <header>
-
+    <p>Personal Nutritionist</p>
   </header>
-  {% block content%} {%endblock%}
+  <section>
+      {% block content%} {%endblock%}
+  </section>
   <footer>
     <p>Your personal nutritionist will always be here to support you! </p>
   </footer>

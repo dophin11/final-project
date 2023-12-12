@@ -11,9 +11,9 @@
                 <li>
                     <h3>{{ result.get('name', 'N/A') }}</h3>
                     <p>Calories: {{ result.get('calories', 'N/A') }}</p>
-                    <p>Protein: {{ result.get('protein', 'N/A') }}</p>
-                    <p>Fat: {{ result.get('fat', 'N/A') }}</p>
-                    <p>Carbohydrates: {{ result.get('carbohydrates', 'N/A') }}</p>
+                    <p>Protein: {{ result.get('protein_g', 'N/A') }}</p>
+                    <p>Fat: {{ result.get('fat_total_g', 'N/A') }}</p>
+                    <p>Carbohydrates: {{ result.get('carbohydrates_total_g', 'N/A') }}</p>
                 </li>
             {% endfor %}
         </ul>

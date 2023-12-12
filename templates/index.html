@@ -3,12 +3,14 @@
 {% block title %}Nutrition Search - Home{% endblock %}
 
 {% block content %}
-    <h2>Welcome to the Nutrition Search App!</h2>
+    <p> Hello {{name}} </p>
     <p>Use the search bar to find nutritional information.</p>
 
     <form action="{{ url_for('results') }}" method="post">
-        <label for="search_query">Search:</label>
-        <input type="text" id="search_query" name="query" required>
+        <label for="search_query">Search Food:</label>
+        <input type="text" id="search_query" name="food" required>
+        <label for="search_amount">Amount:</label>
+        <input type="int" id="search_amount" name="amount" required>
         <button type="submit">Search</button>
     </form>
 {% endblock %}

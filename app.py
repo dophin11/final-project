@@ -3,13 +3,19 @@ from function import call_api
 app = Flask(__name__)
 
 @app.route("/")
+def start():
+    return render_template('start.html')
+@app.route("/index", methods=['GET'])
 def index():
-    return render_template('index.html')
+    username = request.args.get('name')
+    return render_template('index.html', name=username)
 
 @app.route("/results", methods=['GET','POST'])
 def results():
     if request.method == 'POST':
-        query = request.form['query']
+        food = request.form['food']
+        amount = request.form['amount']
+        query = f"{amount} {food}"
         api_result = call_api(query)
 
 
