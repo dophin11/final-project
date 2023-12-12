@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %}Nutrition Search Results{% endblock %}
+
+{% block content %}
+    <h2>Search Results for "{{ query }}"</h2>
+
+    {% if results %}
+        <ul>
+            {% for result in results %}
+                <li>
+                    <h3>{{ result.get('name', 'N/A') }}</h3>
+                    <p>Calories: {{ result.get('calories', 'N/A') }}</p>
+                    <p>Protein: {{ result.get('protein', 'N/A') }}</p>
+                    <p>Fat: {{ result.get('fat', 'N/A') }}</p>
+                    <p>Carbohydrates: {{ result.get('carbohydrates', 'N/A') }}</p>
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No results found for the search term.</p>
+    {% endif %}
+{% endblock %}
